@@ -56,7 +56,7 @@ body {
 
 .container {
   max-width: 100vh;
-  margin-top: 30px;
+  margin-top: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -215,7 +215,8 @@ li p {
 }
 
 .attribution {
-  position: fixed;
+  position: sticky;
+  margin: 20px;
   left: 0;
   bottom: 0;
   right: 0;
