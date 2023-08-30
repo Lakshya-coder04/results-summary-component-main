@@ -1,0 +1,242 @@
+/* 
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue: hsl(252, 100%, 67%); /*(background) */
+  --Light-royal-blue: hsl(241, 81%, 54%); /*(background) */
+  --Violet-blue: hsla(256, 72%, 46%, 1); /*circle) */
+  --Persian-blue: hsla(241, 72%, 46%, 0); /*circle) */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 100vh;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 20px;
+}
+
+.your-result-card {
+  flex: 1;
+  padding: 0 20px;
+  background-image: linear-gradient(
+    to top,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .your-result-card h3 {
+  margin-top: 20px;
+} */
+
+#circle {
+  margin: 20px 20px;
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+  );
+  border-radius: 50%; /* Make it a perfect circle */
+  opacity: 1;
+  z-index: 0;
+  position: relative; /* Enable absolute positioning for child elements */
+}
+
+#circle h3 {
+  margin-top: 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 40px;
+  text-align: center;
+}
+
+#circle p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  text-align: center;
+}
+
+.your-result-card h3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+.your-result-card h2 {
+  color: rgba(255, 255, 255);
+  text-align: center;
+  padding: 10px 10px;
+}
+.your-result-card p {
+  padding-bottom: 30px;
+  margin: 0 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 12px;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.summary-card h3 {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.list-module {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+li {
+  padding: 8px 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Align elements with space between them */
+  align-items: center; /* Vertically center elements */
+  gap: 80px;
+}
+
+li p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.reaction {
+  background-color: hsl(0, 100%, 67%, 0.1);
+}
+.reaction p {
+  color: var(--Light-red);
+}
+
+.memory {
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+.memory p {
+  color: var(--Orangey-yellow);
+}
+.verbal {
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.verbal p {
+  color: var(--Green-teal);
+}
+
+.visual {
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.visual p {
+  color: var(--Cobalt-blue);
+}
+.marks {
+  display: flex;
+  gap: 5px;
+  font-weight: 800;
+  color: var(--Dark-gray-blue);
+}
+.marks span {
+  color: hsla(224, 30%, 27%, 0.6);
+}
+
+.button {
+  margin: 20px 0;
+  padding: 12px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  align-self: center;
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .your-result-card {
+    border-radius: 0 0 30px 30px;
+  }
+  .your-result-card h3 {
+    padding-top: 10px;
+  }
+}
